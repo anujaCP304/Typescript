@@ -1,0 +1,38 @@
+//TypeScript Object Types
+const car: { type: string, model: string, year: number } = {
+    type: "Swift",
+    model: "Model1",
+    year: 2020
+  };
+console.log(car);
+
+// Type Inference
+// TypeScript can infer the types of properties based on their values.
+
+const car2 = {
+  type: "type1",
+};
+console.log(car2);
+
+car2.type = "type2"; // no error
+console.log(car2);
+
+//car2.type = 2; // Error: Type 'number' is not assignable to type 'string'.
+
+
+/////////////////////////////////////////////////////////////////
+// Optional Properties
+// Optional properties are properties that don't have to be defined in the object definition.
+
+//Example without an optional property
+// Error: Property 'mileage' is missing in type '{ type: string; }' but required in type '{ type: string; mileage: number; }'.
+// const car3: { type: string, mileage: number } = { 
+//   type: "BMW",
+// };
+//car3.mileage = 3000;
+
+//Example with an optional property
+const car3: { type: string, mileage?: number } = { // no error
+  type: "BMW"
+};
+car3.mileage = 3000;
