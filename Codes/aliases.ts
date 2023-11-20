@@ -22,3 +22,22 @@ const car1: Car = {
   type: carType,
   model: carModel
 };
+
+
+//Example 2
+type AnimalName = string
+type AnimalType = string
+type Animal = {
+  name: AnimalName,
+  type: AnimalType
+}
+
+const animal1: Animal = {
+  name: "Buddy",
+  type: "Dog"
+}
+
+const animal2: Animal = {
+  name: "Mittens",
+  type: "Cat"
+}
