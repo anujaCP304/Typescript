@@ -1,0 +1,37 @@
+// Typed Arrays
+// A tuple is a typed array with a pre-defined length and types for each index.
+// Tuples allow each element in the array to be a known type of value.
+// To define a tuple, specify the type of each element in the array:
+
+// define our tuple
+let ourTuple: [number, boolean, string];
+
+// initialize correctly
+ourTuple = [5, false, 'I am learning typescript'];
+console.log(ourTuple);
+
+// initialized incorrectly which throws an error
+//the order matters in our tuple and will throw an error.
+//ourTuple = [false, 'I am learning typescript', 5];
+
+
+// Readonly Tuple
+// Tuples only have strongly defined types for the initial values:
+
+// define our tuple
+let ourTuple2: [number, boolean, string];
+// initialize correctly
+ourTuple2 = [5, false, 'I am learning typescript'];
+// We have no type safety in our tuple for indexes 3+
+ourTuple2.push('I am working at catchpoint');
+console.log(ourTuple2);
+
+// define our readonly tuple
+const ourReadonlyTuple: readonly [number, boolean, string] = [5, true, 'The Real Coding God'];
+// below statement throws error as it is readonly.
+//ourReadonlyTuple.push('I am learning typescript');
+
+// Named Tuples
+// Named tuples allow us to provide context for our values at each index.
+
+const graph: [x: number, y: number] = [20.34, 76.90];
