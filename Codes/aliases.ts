@@ -1,3 +1,4 @@
+
 // TypeScript allows types to be defined separately from the variables that use them.
 // Aliases and Interfaces allows types to be easily shared between different variables/objects.
 
