@@ -1,0 +1,16 @@
+interface Animal {
+  species: string;
+  sound: string;
+}
+
+// `keyof Animal` here creates a union type of "species" and "sound", other strings will not be allowed
+function printAnimalProperty(animal: Animal, property: keyof Animal) {
+  console.log(`Printing animal property ${property}: "${animal[property]}"`);
+}
+
+let animal = {
+  species: "dog",
+  sound: "woof"
+};
+
+printAnimalProperty(animal, "sound"); // Printing animal property sound: "woof"
