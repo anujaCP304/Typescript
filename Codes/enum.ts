@@ -13,5 +13,5 @@ enum CardinalDirections {
   console.log(currentDirection2);
 
   
-  // throws error as 'North' is not a valid enum
- // currentDirection = 'North'; // Error: "North" is not assignable to type 'CardinalDirections'.
+// throws error as 'North' is not a valid enum
+// currentDirection = 'North'; // Error: "North" is not assignable to type 'CardinalDirections'.
