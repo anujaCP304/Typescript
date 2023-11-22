@@ -12,7 +12,8 @@ console.log((x1 as string).length);
 
 const x2: unknown = 4;
 console.log((x2 as string).length); // prints undefined since numbers don't have a length
-// TypeScript will still attempt to typecheck casts to prevent casts that don't seem correct, 
+// TypeScript will still attempt to typecheck casts to prevent casts that don't seem correct,
+
 // for example the following will throw a type error 
 // since TypeScript knows casting a string to a number doesn't makes sense without converting the data:
 //console.log((4 as string).length); 
